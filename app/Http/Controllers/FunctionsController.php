@@ -17,4 +17,11 @@ class FunctionsController extends Controller
             response()->json(['status' => 'OK', 'message' => 'correct answer']) :
             response()->json(['status' => 'fail', 'message' => 'incorrect answer']);
     }
+
+    public function isValid()
+    {
+        return response()->json([
+            "status" => "OK"
+        ]);
+    }
 }
