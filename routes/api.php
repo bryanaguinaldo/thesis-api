@@ -23,3 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResource('/entries', EntriesController::class);
 Route::post('/entries/update/{entry}', [EntriesController::class, 'update'])->name('entries.update');
 Route::post('/verify/{entry}', [FunctionsController::class, 'verify'])->name('functions.verify');
+Route::get('/verify/server_validity', [FunctionsController::class, 'isValid'])->name('functions.verify');
